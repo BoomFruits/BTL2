@@ -14,7 +14,7 @@ class Cart_tree:
         self.acceptable_impurity = acceptable_impurity
         
     def predict(self, inputs):
-        current_node = self.tree
+        current_node = self.tree # Didn`t declare
         while current_node.left:
             if inputs[current_node.feature_index] < current_node.threshold:
                 current_node = current_node.left
