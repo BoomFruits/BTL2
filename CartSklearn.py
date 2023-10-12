@@ -20,10 +20,19 @@ clf = DecisionTreeClassifier(criterion="gini",max_depth=11,min_samples_split=2).
 y_predict = clf.predict(X_test)
 from sklearn.metrics import accuracy_score
 print('CartTree')
-print('Accuracy score: ',accuracy_score(y_predict,y_test))
-print('Precision_score: ',precision_score(y_predict,y_test))
-print('Recall_score: ',recall_score(y_predict,y_test))
-print('F1_score:',f1_score(y_predict,y_test))
+acc = accuracy_score(y_predict,y_test)
+precision_score = precision_score(y_predict,y_test)
+recall_score = recall_score(y_predict,y_test)
+f1_score = f1_score(y_predict,y_test)
+print('Accuracy score: ',acc)
+print('Precision_score: ',precision_score)
+print('Recall_score: ',recall_score)
+print('F1_score:',f1_score)
+print('Ty le du doan sai cua CartTree')
+print('Accuracy score: ',1-acc)
+print('Precision_score: ',1-precision_score)
+print('Recall_score: ',1-recall_score)
+print('F1_score:',1-f1_score)
 #Visualize decision tree
 # import matplotlib.pyplot as plt
 # plt.figure(figsize=(12,8))
